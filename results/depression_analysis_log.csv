@@ -1,0 +1,3 @@
+Timestamp,Video,Facial Result,Facial Confidence,Voice Result,Voice Confidence,Final Status
+2025-04-05 23:07:18,videoplayback.mp4,Negative,0.45,Negative,0.16,Depressed
+2025-04-06 14:46:31,videoplayback.mp4,Positive,0.73,Negative,0.01,Inconclusive

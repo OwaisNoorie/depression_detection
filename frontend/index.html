@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EmotiCheck</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>EmotiCheck</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#instructions">Instructions</a>
+      <a href="#login">Login / Signup</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Welcome to EmotiCheck</h2>
+    <p>Our platform uses AI to analyze emotional patterns from your facial expressions and voice to assist in early detection of depressive symptoms.</p>
+
+    <!-- 🎥 Upload Your Video Section -->
+    <div class="upload-section">
+      <h3>🎥 Upload Your Video</h3>
+      <p>Please upload a short video (30–60 seconds) where you're talking or expressing naturally.</p>
+
+      <form id="video-analyze-form">
+        <input type="file" id="videoInput" name="file" accept="video/*" required />
+        <button type="submit">Upload & Analyze</button>
+      </form>
+      
+      <div id="upload-status"></div>
+      <div id="result" style="margin-top: 15px;"></div>
+    </div>
+
+    <!-- 📝 PHQ-9 Quiz Section -->
+    <div class="quiz-section">
+      <h3>📝 Take the PHQ-9 Quiz</h3>
+      <form class="phq9-form" id="phq9-form">
+        <p>Over the last 2 weeks, how often have you been bothered by any of the following problems?</p>
+
+        <!-- PHQ-9 Questions -->
+        <ol>
+          <li>
+            Little interest or pleasure in doing things?
+            <br>
+            <select name="q1" required>
+              <option value="">Select</option>
+              <option value="0">Not at all</option>
+              <option value="1">Several days</option>
+              <option value="2">More than half the days</option>
+              <option value="3">Nearly every day</option>
+            </select>
+          </li>
+          <li>
+            Feeling down, depressed, or hopeless?
+            <br>
+            <select name="q2" required>
+              <option value="">Select</option>
+              <option value="0">Not at all</option>
+              <option value="1">Several days</option>
+              <option value="2">More than half the days</option>
+              <option value="3">Nearly every day</option>
+            </select>
+          </li>
+          <li>
+            Trouble falling or staying asleep, or sleeping too much?
+            <br>
+            <select name="q3" required>
+              <option value="">Select</option>
+              <option value="0">Not at all</option>
+              <option value="1">Several days</option>
+              <option value="2">More than half the days</option>
+              <option value="3">Nearly every day</option>
+            </select>
+          </li>
+          <li>
+            Feeling tired or having little energy?
+            <br>
+            <select name="q4" required>
+              <option value="">Select</option>
+              <option value="0">Not at all</option>
+              <option value="1">Several days</option>
+              <option value="2">More than half the days</option>
+              <option value="3">Nearly every day</option>
+            </select>
+          </li>
+          <li>
+            Poor appetite or overeating?
+            <br>
+            <select name="q5" required>
+              <option value="">Select</option>
+              <option value="0">Not at all</option>
+              <option value="1">Several days</option>
+              <option value="2">More than half the days</option>
+              <option value="3">Nearly every day</option>
+            </select>
+          </li>
+          <li>
+            Feeling bad about yourself — or that you are a failure or have let yourself or your family down?
+            <br>
+            <select name="q6" required>
+              <option value="">Select</option>
+              <option value="0">Not at all</option>
+              <option value="1">Several days</option>
+              <option value="2">More than half the days</option>
+              <option value="3">Nearly every day</option>
+            </select>
+          </li>
+          <li>
+            Trouble concentrating on things, such as reading the newspaper or watching television?
+            <br>
+            <select name="q7" required>
+              <option value="">Select</option>
+              <option value="0">Not at all</option>
+              <option value="1">Several days</option>
+              <option value="2">More than half the days</option>
+              <option value="3">Nearly every day</option>
+            </select>
+          </li>
+          <li>
+            Moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless?
+            <br>
+            <select name="q8" required>
+              <option value="">Select</option>
+              <option value="0">Not at all</option>
+              <option value="1">Several days</option>
+              <option value="2">More than half the days</option>
+              <option value="3">Nearly every day</option>
+            </select>
+          </li>
+          <li>
+            Thoughts that you would be better off dead or of hurting yourself in some way?
+            <br>
+            <select name="q9" required>
+              <option value="">Select</option>
+              <option value="0">Not at all</option>
+              <option value="1">Several days</option>
+              <option value="2">More than half the days</option>
+              <option value="3">Nearly every day</option>
+            </select>
+          </li>
+        </ol>
+
+        <button type="submit">Submit Quiz</button>
+      </form>
+      <div id="quiz-result" class="result-box"></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About EmotiCheck</h2>
+    <p>EmotiCheck is designed to help individuals understand their emotional well-being through AI analysis. It is not a replacement for professional therapy.</p>
+  </section>
+
+  <section id="instructions">
+    <h2>How to Use EmotiCheck</h2>
+    <ol>
+      <li>Record a short video of yourself (30–60 seconds) answering the questions below.</li>
+      <li>Upload the video in the Home section.</li>
+      <li>Take the PHQ-9 quiz based on how you’ve been feeling over the past 2 weeks.</li>
+      <li>View your emotional analysis results.</li>
+    </ol>
+
+    <h3>🎤 Questions to Answer in Your Video</h3>
+    <ul>
+      <li>How have you been feeling lately?</li>
+      <li>Can you describe your recent sleep patterns?</li>
+      <li>How is your appetite?</li>
+      <li>Have you been enjoying activities you used to enjoy?</li>
+      <li>How often do you feel tired or low on energy?</li>
+      <li>Do you feel anxious or hopeless?</li>
+      <li>Do you feel loved and supported by the people around you?</li>
+      <li>How often do you find it hard to focus?</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Contact us at: contact@emoticheck.com | © 2025 EmotiCheck</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
